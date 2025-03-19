@@ -1,0 +1,66 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#top {
+    background-image: linear-gradient(grey, white);
+}
+
+time {
+    font-size: 0.6rem;
+}
+
+/* Hero Section */
+.hero {
+    background: #333 url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#image {
+    padding: 4rem 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#image a {
+    display:block;
+    text-decoration:none;
+    color:black;
+    font-style: italic;
+    font-size: 0.8rem;
+ }
+
+/* Contact Section */
+#footer {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #DCDCDC
+}
+
+#footer e {
+    float: center;
+}
+
+
