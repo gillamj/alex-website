@@ -12,7 +12,7 @@ body {
     color: #333;
 }
 
-#top {
+.top {
     background-image: linear-gradient(grey, white);
 }
 
@@ -22,44 +22,62 @@ time {
 
 /* Hero Section */
 .hero {
-    background: #333 url('hero-image.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 80px 0;
+  --s: 50px; /* control the size*/
+  --c1: #fafafa;
+  --c2: #d7e0df;
+
+  --c:var(--c2) 20% 30%;
+  background:
+    linear-gradient(135deg,#0000 20%,var(--c),#0000 0),
+    repeating-linear-gradient(45deg,var(--c),var(--c1) 0 70%);
+  background-size: var(--s) var(--s);
+  text-align: center;
+  padding: 20px 0;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .hero p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-#image {
-    padding: 4rem 0;
-    background-color: #f8f8f8;
-    text-align: center;
-}
+.image {
+  --s: 172px; /* control the size*/
+  --c1: #fafafa;
+  --c2: #d7e0df;
 
-#image a {
-    display:block;
-    text-decoration:none;
-    color:black;
-    font-style: italic;
-    font-size: 0.8rem;
- }
+  --_g: #0000 90deg,var(--c1) 0;
+  background:
+    conic-gradient(from 116.56deg at calc(100%/3) 0   ,var(--_g)),
+    conic-gradient(from -63.44deg at calc(200%/3) 100%,var(--_g))
+    var(--c2);
+  background-size: var(--s) var(--s);
+  text-align: center;
+}
 
 /* Contact Section */
-#footer {
-    padding: 2rem 0;
-    text-align: center;
-    background-color: #DCDCDC
+.footer {
+  --s: 50px; /* control the size*/
+  --c1: #fafafa;
+  --c2: #d7e0df;
+
+  --c:var(--c2) 20% 30%;
+  background:
+    linear-gradient(135deg,#0000 20%,var(--c),#0000 0),
+    repeating-linear-gradient(45deg,var(--c),var(--c1) 0 70%);
+  background-size: var(--s) var(--s);
+  padding: 5px;
+  text-align: center;
+  opacity: 0.5;
 }
 
-#footer e {
+.footer e {
     float: center;
 }
 
