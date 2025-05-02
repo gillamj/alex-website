@@ -1,84 +1,463 @@
-/* General styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+/* Mobile devices (small screens) */
+@media only screen and (max-width: 640px) {
+	.portrait img {
+		transform: scale(1.0);
+	}
+
+	.office img {
+		transform: scale(1.0);
+	}
+
+	.main {
+		--s: 50px;
+		height: 877px;
+	}
+
+	.font {
+		font-size: 3.4em;
+	}
+}
+
+/* Tablets (medium screens) */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+	.portrait img {
+		left: -24.25%;
+		top: -58.25%;
+		transform: scale(0.45);
+	}
+
+	.office img {
+		right: -35.25%;
+		top: -33.25%;
+		transform: scale(0.45);
+	}
+
+	.main {
+		--s: 25px;
+		height: 397px;
+	}
+
+	.font {
+		font-size: 1.4em;
+		right: 17.5%;
+		top: 35%;
+	}
+
+	.websites e {
+		right: 20.0%;
+		bottom: 23.5%;
+	}
+}
+
+/* Desktop (medium screens) */
+@media only screen and (min-width: 1024px) and (max-width: 1151px) {
+	.portrait img {
+		left: -14.25%;
+		top: -28.25%;
+		transform: scale(0.58);
+	}
+
+	.office img {
+		right: -20.75%;
+		top: -10.25%;
+		transform: scale(0.58);
+	}
+
+	.main {
+		--s: 40px;
+		height: 550px;
+	}
+
+	.font {
+		font-size: 2.0em;
+		right: 15.5%;
+		top: 35%;
+	}
+
+	.websites e {
+		right: 20.0%;
+		bottom: 23.5%;
+	}
+}
+
+@media only screen and (min-width: 1152px) and (max-width: 1175px) {
+	.portrait img {
+		left: -10.25%;
+		top: -16.25%;
+		transform: scale(0.65);
+	}
+
+	.office img {
+		right: -14.75%;
+		top: -1.25%;
+		transform: scale(0.65);
+	}
+
+	.main {
+		--s: 45px;
+		height: 661px;
+	}
+
+	.font {
+		font-size: 2.3em;
+		right: 15.5%;
+		top: 32.5%;
+	}
+
+	.websites e {
+		right: 20.0%;
+		bottom: 27.0%;
+	}
+}
+
+@media only screen and (min-width: 1176px) and (max-width: 1440px) {
+	.portrait img {
+		left: -13.25%;
+		top: -44.25%;
+		transform: scale(0.52);
+	}
+
+	.office img {
+		right: -9.75%;
+		top: -22.50%;
+		transform: scale(0.52);
+	}
+
+	.main {
+		--s: 35px;
+		height: 461px;
+	}
+
+	.font {
+		font-size: 1.8em;
+		right: 22.5%;
+		top: 30.5%;
+	}
+
+	.websites e {
+		right: 25.0%;
+		bottom: 24.0%;
+	}
+}
+
+@media only screen and (min-width: 1176px) and (max-width: 1279px) {
+	.portrait img {
+		left: -13.25%;
+		top: -44.25%;
+		transform: scale(0.52);
+	}
+
+	.office img {
+		right: -9.75%;
+		top: -22.50%;
+		transform: scale(0.52);
+	}
+
+	.main {
+		--s: 35px;
+		height: 461px;
+	}
+
+	.font {
+		font-size: 1.8em;
+		right: 22.5%;
+		top: 30.5%;
+	}
+
+	.websites e {
+		right: 25.0%;
+		bottom: 24.0%;
+	}
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1359px) {
+	.portrait img {
+		left: -8.25%;
+		top: -34.25%;
+		transform: scale(0.59);
+	}
+
+	.office img {
+		right: -8.25%;
+		top: -15.00%;
+		transform: scale(0.59);
+	}
+
+	.main {
+		--s: 35px;
+		height: 517px;
+	}
+
+	.font {
+		font-size: 2.3em;
+		right: 18.5%;
+		top: 24.5%;
+	}
+
+	.websites e {
+		right: 23.0%;
+		bottom: 25.0%;
+	}
+}
+
+@media only screen and (min-width: 1360px) and (max-width: 1439px) {
+	.portrait img {
+		left: -8.25%;
+		top: -27.00%;
+		transform: scale(0.64);
+	}
+
+	.office img {
+		right: -5.25%;
+		top: -9.25%;
+		transform: scale(0.64);
+	}
+
+	.main {
+		--s: 38px;
+		height: 565px;
+	}
+
+	.font {
+		font-size: 2.4em;
+		right: 20.5%;
+		top: 24.5%;
+	}
+
+	.websites e {
+		right: 24.0%;
+		bottom: 25.0%;
+	}
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+	.portrait img {
+		left: -4.25%;
+		top: -12.25%;
+		transform: scale(0.80);
+	}
+
+	.office img {
+		right: -5.75%;
+		top: 2.00%;
+		transform: scale(0.80);
+	}
+
+	.main {
+		--s: 40px;
+		height: 697px;
+	}
+
+	.font {
+		font-size: 2.8em;
+		right: 16.5%;
+		top: 30.5%;
+	}
+
+	.websites e {
+		right: 21.0%;
+		bottom: 24.0%;
+	}
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1679px) {
+	.portrait img {
+		left: -4.25%;
+		top: -12.25%;
+		transform: scale(0.80);
+	}
+
+	.office img {
+		right: 0.00%;
+		top: 2.00%;
+		transform: scale(0.80);
+	}
+
+	.main {
+		--s: 42px;
+		height: 697px;
+	}
+
+	.font {
+		font-size: 2.9em;
+		right: 19.5%;
+		top: 29.5%;
+	}
+
+	.websites e {
+		right: 24.0%;
+		bottom: 24.0%;
+	}
+}
+
+@media only screen and (min-width: 1680px) and (max-width: 1767px) {
+	.portrait img {
+		left: -0.75%;
+		top: -1.25%;
+		transform: scale(0.96);
+	}
+
+	.office img {
+		right: -0.75%;
+		top: 10.50%;
+		transform: scale(0.96);
+	}
+
+	.main {
+		--s: 43px;
+		height: 847px;
+	}
+
+	.font {
+		font-size: 3.2em;
+		right: 16.5%;
+		top: 31.0%;
+	}
+
+	.websites e {
+		right: 21.0%;
+		bottom: 24.0%;
+	}
+}
+
+@media only screen and (min-width: 1768px) and (max-width: 1919px) {
+	.portrait img {
+		left: -0.75%;
+		top: -5.25%;
+		transform: scale(0.90);
+	}
+
+	.office img {
+		right: 2.75%;
+		top: 7.25%;
+		transform: scale(0.90);
+	}
+
+	.main {
+		--s: 43px;
+		height: 789px;
+	}
+
+	.font {
+		font-size: 3.1em;
+		right: 18.5%;
+		top: 29.0%;
+	}
+
+	.websites e {
+		right: 22.5%;
+		bottom: 24.0%;
+	}
+}
+
+/* Tablets (large screens) */
+@media only screen and (min-width: 1920px) {
+	.portrait img {
+		left: 2.25%;
+		top: 1.25%;
+		transform: scale(1.0);
+	}
+
+	.office img {
+		right: 4.25%;
+		top: 12.75%;
+		transform: scale(1.0);
+	}
+
+	.main {
+		--s: 50px;
+		height: 877px;
+	}
+
+	.font {
+		font-size: 3.4em;
+		right: 17.5%;
+		top: 30%;
+	}
+
+	.websites e {
+		right: 21.5%;
+		bottom: 25%;
+	}
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: #f4f4f4;
+	color: #333;
 }
 
 .top {
-    background-image: linear-gradient(grey, white);
+	background-image: linear-gradient(grey, white);
 }
 
 time {
-    font-size: 0.6rem;
+	font-size: 0.6rem;
 }
 
-/* Hero Section */
-.hero {
-  --s: 50px; /* control the size*/
-  --c1: #fafafa;
-  --c2: #d7e0df;
-
-  --c:var(--c2) 20% 30%;
-  background:
-    linear-gradient(135deg,#0000 20%,var(--c),#0000 0),
-    repeating-linear-gradient(45deg,var(--c),var(--c1) 0 70%);
-  background-size: var(--s) var(--s);
-  text-align: center;
-  padding: 20px 0;
+.portrait img {
+	position: absolute;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+.office img {
+	position: absolute;
+	opacity: 0.4;
+	border-radius: 10px;
 }
 
-.hero p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+.main {
+	transform: scale(1.0);
+	width: 100%;
+	--c1: #fafafa;
+	--c2: #d7e0df;
+	--c: var(--c2) 20% 30%;
+	background:
+		linear-gradient(135deg, #0000 20%, var(--c), #0000 0),
+		repeating-linear-gradient(45deg, var(--c), var(--c1) 0 70%);
+	background-size: var(--s) var(--s);
+	position: relative;
 }
 
-.image {
-  --s: 172px; /* control the size*/
-  --c1: #fafafa;
-  --c2: #d7e0df;
+.border {
+	--s: 75px;
+	/* image size */
+	--b: 50px;
+	/* control the border thickness */
+	--n: 2;
+	/* number of borders */
+	--c: #774F38;
 
-  --_g: #0000 90deg,var(--c1) 0;
-  background:
-    conic-gradient(from 116.56deg at calc(100%/3) 0   ,var(--_g)),
-    conic-gradient(from -63.44deg at calc(200%/3) 100%,var(--_g))
-    var(--c2);
-  background-size: var(--s) var(--s);
-  text-align: center;
+
+	aspect-ratio: 1.2;
+	/* It works with any ratio */
+	--_p: calc(var(--b)*var(--n));
+	--_d: calc(var(--s)/(2*var(--n)) + var(--b));
+	padding: var(--_p);
+	border-radius: calc(var(--_p) + var(--b)/4);
+	border-image:
+		repeating-radial-gradient(var(--c) 0, #0000 2px calc(var(--_d)/2 - 2px),
+			var(--c) calc(var(--_d)/2) var(--_d)) 49.8%/var(--_p);
+
+	clip-path: inset(0 round var(--_p))
 }
 
-/* Contact Section */
-.footer {
-  --s: 50px; /* control the size*/
-  --c1: #fafafa;
-  --c2: #d7e0df;
-
-  --c:var(--c2) 20% 30%;
-  background:
-    linear-gradient(135deg,#0000 20%,var(--c),#0000 0),
-    repeating-linear-gradient(45deg,var(--c),var(--c1) 0 70%);
-  background-size: var(--s) var(--s);
-  padding: 5px;
-  text-align: center;
-  opacity: 0.5;
+.font {
+	/*  padding: 1em 1em;*/
+	font-family: 'Gochi Hand', cursive;
+	color: #000000;
+	text-wrap: nowrap;
+	font-weight: bold;
+	position: absolute;
 }
 
-.footer e {
-    float: center;
+.font o {
+	display: block;
 }
 
 
+.websites e {
+	position: absolute;
+}
