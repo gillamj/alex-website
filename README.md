@@ -30,6 +30,6 @@ This is a personal static website built using HTML, CSS, and JavaScript. It serv
 │   └── githubicon.png    # Github imagine icon
 │   └── githubiconv2.png  # Updated Github imagine icon
 │   └── linkedinicon.jpg  # LinkedIn image icon
-│   └── office.jpg        # Office image 
+│   └── office.jpg        # Office image
 ├── README.md             # Project description (this file)
 └── websiteconfig.json    # Json config file that contains LinkedIn, Github, and Resume links.
