@@ -1,0 +1,69 @@
+name: Sync changed files to S3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Detect file changes
+        run: |
+          WATCHED_FOLDERS="css images js"
+          WATCHED_ROOT_FILES="websiteconfig.json index.html"
+      
+          > changes.txt
+      
+          git diff --name-status ${{ github.event.before }} ${{ github.sha }} | while read status file; do
+            # Check root-level files
+            for root_file in $WATCHED_ROOT_FILES; do
+              if [[ "$file" == "$root_file" ]]; then
+                echo "$status $file" >> changes.txt
+              fi
+            done
+      
+            # Check folders
+            for folder in $WATCHED_FOLDERS; do
+              if [[ "$file" == "$folder/"* ]]; then
+                echo "$status $file" >> changes.txt
+              fi
+            done
+          done
+
+
+          echo "Detected changes:"
+          cat changes.txt || true
+
+      - name: Apply changes to S3
+        run: |
+          BUCKET="alexpersonalwebsite.com"
+
+          while read status file; do
+            case "$status" in
+              A|M)
+                if [ -f "$file" ]; then
+                  echo "Uploading $file"
+                  aws s3 cp "$file" "s3://$BUCKET/$file"
+                fi
+                ;;
+              D)
+                echo "Deleting $file from S3"
+                aws s3 rm "s3://$BUCKET/$file"
+                ;;
+            esac
+          done < changes.txt
