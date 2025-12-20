@@ -48,6 +48,7 @@ function updateTime() {
    document.getElementById('clock').textContent = dateString;
 }
 
+
 // Call updateTime every second
 setInterval(updateTime, 1000);
 

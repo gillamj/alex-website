@@ -167,6 +167,7 @@ function getWebsiteDetails(screenWidth) {
       })
 }
 
+
 const screenWidth = window.screen.width;
 //var width = document.documentElement.clientWidth;
 //var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
