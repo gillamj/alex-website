@@ -3,13 +3,13 @@
 /* Mobile devices (small screens) */
 @media only screen and (max-width: 640px) {
 	.portrait img {
-		left: -45%;
-		top: -45.25%;
+		left: -42%;
+		top: -35.25%;
 		transform: scale(0.42);
 	}
 
 	.office img {
-		left: -85%;
+		left: -75%;
 		top: 25.25%;
 		transform: scale(0.38);
 	}
