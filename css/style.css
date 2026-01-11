@@ -4,12 +4,12 @@
 @media only screen and (max-width: 640px) {
 	.portrait img {
 		left: -42%;
-		top: -35.25%;
+		top: -38.25%;
 		transform: scale(0.42);
 	}
 
 	.office img {
-		left: -75%;
+		left: -79%;
 		top: 25.25%;
 		transform: scale(0.38);
 	}
@@ -21,7 +21,7 @@
 
 	.font {
 		font-size: 1.50em;
-		right: 10%;
+		right: 15%;
 		bottom: 10%;
 	}
 
