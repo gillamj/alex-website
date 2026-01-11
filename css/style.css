@@ -3,13 +3,13 @@
 /* Mobile devices (small screens) */
 @media only screen and (max-width: 640px) {
 	.portrait img {
-		left: 25%;
+		left: 50%;
 		top: -40.25%;
 		transform: scale(0.40);
 	}
 
 	.office img {
-		right: 25%;
+		right: 50%;
 		top: 25.25%;
 		transform: scale(0.40);
 	}
@@ -22,12 +22,12 @@
 	.font {
 		font-size: 1.50em;
 		right: 25%;
-		bottom: 25%;
+		bottom: 10%;
 	}
 
 	.websites e {
 		right: 20.0%;
-		bottom: 23.5%;
+		bottom: 8.5%;
 	}
 }
 
