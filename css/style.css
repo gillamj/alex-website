@@ -3,20 +3,31 @@
 /* Mobile devices (small screens) */
 @media only screen and (max-width: 640px) {
 	.portrait img {
-		transform: scale(1.0);
+		left: -50%;
+		top: -58.25%;
+		transform: scale(0.15);
 	}
 
 	.office img {
-		transform: scale(1.0);
+		right: -50%;
+		top: -10.25%;
+		transform: scale(0.15);
 	}
 
 	.main {
-		--s: 50px;
-		height: 877px;
+		--s: 25px;
+		height: 397px;
 	}
 
 	.font {
-		font-size: 3.4em;
+		font-size: 0.75em;
+		right: 50%;
+		bottom: 35%;
+	}
+
+	.websites e {
+		right: 20.0%;
+		bottom: 23.5%;
 	}
 }
 
