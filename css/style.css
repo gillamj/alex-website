@@ -5,13 +5,13 @@
 	.portrait img {
 		left: -40%;
 		top: -40.25%;
-		transform: scale(0.40);
+		transform: scale(0.42);
 	}
 
 	.office img {
 		left: -80%;
 		top: 25.25%;
-		transform: scale(0.35);
+		transform: scale(0.38);
 	}
 
 	.main {
@@ -21,7 +21,7 @@
 
 	.font {
 		font-size: 1.50em;
-		right: 30%;
+		right: 50%;
 		bottom: 10%;
 	}
 
