@@ -1,473 +1,195 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
-/* Mobile devices (small screens) */
-@media only screen and (max-width: 640px) {
-	.portrait img {
-		left: -42%;
-		top: -38.25%;
-		transform: scale(0.42);
-	}
-
-	.office img {
-		left: -81%;
-		top: 25.25%;
-		transform: scale(0.38);
-	}
-
-	.main {
-		--s: 25px;
-		height: 650px;
-	}
-
-	.font {
-		font-size: 1.50em;
-		right: 22%;
-		bottom: 10%;
-	}
-
-	.websites e {
-		right: 20.0%;
-		bottom: 8.5%;
-	}
-}
-
-/* Tablets (medium screens) */
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-	.portrait img {
-		left: -24.25%;
-		top: -58.25%;
-		transform: scale(0.45);
-	}
-
-	.office img {
-		right: -35.25%;
-		top: -33.25%;
-		transform: scale(0.45);
-	}
-
-	.main {
-		--s: 25px;
-		height: 397px;
-	}
-
-	.font {
-		font-size: 1.4em;
-		right: 17.5%;
-		top: 35%;
-	}
-
-	.websites e {
-		right: 20.0%;
-		bottom: 23.5%;
-	}
-}
-
-/* Desktop (medium screens) */
-@media only screen and (min-width: 1024px) and (max-width: 1151px) {
-	.portrait img {
-		left: -14.25%;
-		top: -28.25%;
-		transform: scale(0.58);
-	}
-
-	.office img {
-		right: -20.75%;
-		top: -10.25%;
-		transform: scale(0.58);
-	}
-
-	.main {
-		--s: 40px;
-		height: 550px;
-	}
-
-	.font {
-		font-size: 2.0em;
-		right: 15.5%;
-		top: 35%;
-	}
-
-	.websites e {
-		right: 20.0%;
-		bottom: 23.5%;
-	}
-}
-
-@media only screen and (min-width: 1152px) and (max-width: 1175px) {
-	.portrait img {
-		left: -10.25%;
-		top: -16.25%;
-		transform: scale(0.65);
-	}
-
-	.office img {
-		right: -14.75%;
-		top: -1.25%;
-		transform: scale(0.65);
-	}
-
-	.main {
-		--s: 45px;
-		height: 661px;
-	}
-
-	.font {
-		font-size: 2.3em;
-		right: 15.5%;
-		top: 32.5%;
-	}
-
-	.websites e {
-		right: 20.0%;
-		bottom: 27.0%;
-	}
-}
-
-@media only screen and (min-width: 1176px) and (max-width: 1440px) {
-	.portrait img {
-		left: -13.25%;
-		top: -44.25%;
-		transform: scale(0.52);
-	}
-
-	.office img {
-		right: -9.75%;
-		top: -22.50%;
-		transform: scale(0.52);
-	}
-
-	.main {
-		--s: 35px;
-		height: 461px;
-	}
-
-	.font {
-		font-size: 1.8em;
-		right: 22.5%;
-		top: 30.5%;
-	}
-
-	.websites e {
-		right: 25.0%;
-		bottom: 24.0%;
-	}
-}
-
-@media only screen and (min-width: 1176px) and (max-width: 1279px) {
-	.portrait img {
-		left: -13.25%;
-		top: -44.25%;
-		transform: scale(0.52);
-	}
-
-	.office img {
-		right: -9.75%;
-		top: -22.50%;
-		transform: scale(0.52);
-	}
-
-	.main {
-		--s: 35px;
-		height: 461px;
-	}
-
-	.font {
-		font-size: 1.8em;
-		right: 22.5%;
-		top: 30.5%;
-	}
-
-	.websites e {
-		right: 25.0%;
-		bottom: 24.0%;
-	}
-}
-
-@media only screen and (min-width: 1280px) and (max-width: 1359px) {
-	.portrait img {
-		left: -8.25%;
-		top: -34.25%;
-		transform: scale(0.59);
-	}
-
-	.office img {
-		right: -8.25%;
-		top: -15.00%;
-		transform: scale(0.59);
-	}
-
-	.main {
-		--s: 35px;
-		height: 517px;
-	}
-
-	.font {
-		font-size: 2.3em;
-		right: 18.5%;
-		top: 24.5%;
-	}
-
-	.websites e {
-		right: 23.0%;
-		bottom: 25.0%;
-	}
-}
-
-@media only screen and (min-width: 1360px) and (max-width: 1439px) {
-	.portrait img {
-		left: -8.25%;
-		top: -27.00%;
-		transform: scale(0.64);
-	}
-
-	.office img {
-		right: -5.25%;
-		top: -9.25%;
-		transform: scale(0.64);
-	}
-
-	.main {
-		--s: 38px;
-		height: 565px;
-	}
-
-	.font {
-		font-size: 2.4em;
-		right: 20.5%;
-		top: 24.5%;
-	}
-
-	.websites e {
-		right: 24.0%;
-		bottom: 25.0%;
-	}
-}
-
-@media only screen and (min-width: 1440px) and (max-width: 1599px) {
-	.portrait img {
-		left: -4.25%;
-		top: -12.25%;
-		transform: scale(0.80);
-	}
-
-	.office img {
-		right: -5.75%;
-		top: 2.00%;
-		transform: scale(0.80);
-	}
-
-	.main {
-		--s: 40px;
-		height: 697px;
-	}
-
-	.font {
-		font-size: 2.8em;
-		right: 16.5%;
-		top: 30.5%;
-	}
-
-	.websites e {
-		right: 21.0%;
-		bottom: 24.0%;
-	}
-}
-
-@media only screen and (min-width: 1600px) and (max-width: 1679px) {
-	.portrait img {
-		left: -4.25%;
-		top: -12.25%;
-		transform: scale(0.80);
-	}
-
-	.office img {
-		right: 0.00%;
-		top: 2.00%;
-		transform: scale(0.80);
-	}
-
-	.main {
-		--s: 42px;
-		height: 697px;
-	}
-
-	.font {
-		font-size: 2.9em;
-		right: 19.5%;
-		top: 29.5%;
-	}
-
-	.websites e {
-		right: 24.0%;
-		bottom: 24.0%;
-	}
-}
-
-@media only screen and (min-width: 1680px) and (max-width: 1767px) {
-	.portrait img {
-		left: -0.75%;
-		top: -1.25%;
-		transform: scale(0.96);
-	}
-
-	.office img {
-		right: -0.75%;
-		top: 10.50%;
-		transform: scale(0.96);
-	}
-
-	.main {
-		--s: 43px;
-		height: 847px;
-	}
-
-	.font {
-		font-size: 3.2em;
-		right: 16.5%;
-		top: 31.0%;
-	}
-
-	.websites e {
-		right: 21.0%;
-		bottom: 24.0%;
-	}
-}
-
-@media only screen and (min-width: 1768px) and (max-width: 1919px) {
-	.portrait img {
-		left: -0.75%;
-		top: -5.25%;
-		transform: scale(0.90);
-	}
-
-	.office img {
-		right: 2.75%;
-		top: 7.25%;
-		transform: scale(0.90);
-	}
-
-	.main {
-		--s: 43px;
-		height: 789px;
-	}
-
-	.font {
-		font-size: 3.1em;
-		right: 18.5%;
-		top: 29.0%;
-	}
-
-	.websites e {
-		right: 22.5%;
-		bottom: 24.0%;
-	}
-}
-
-/* Tablets (large screens) */
-@media only screen and (min-width: 1920px) {
-	.portrait img {
-		left: 2.25%;
-		top: 1.25%;
-		transform: scale(1.0);
-	}
-
-	.office img {
-		right: 4.25%;
-		top: 12.75%;
-		transform: scale(1.0);
-	}
-
-	.main {
-		--s: 50px;
-		height: 877px;
-	}
-
-	.font {
-		font-size: 3.4em;
-		right: 17.5%;
-		top: 30%;
-	}
-
-	.websites e {
-		right: 21.5%;
-		bottom: 25%;
-	}
-}
-
+/* Reset & Base */
 body {
-	font-family: Arial, sans-serif;
-	line-height: 1.6;
-	background-color: #f4f4f4;
-	color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .top {
-	background-image: linear-gradient(grey, white);
+  background: linear-gradient(grey, white);
+  padding: 0.5rem;
 }
 
 time {
-	font-size: 0.6rem;
+  font-size: 0.6rem;
+}
+
+/* Main container */
+.main {
+  width: 100%;
+  min-height: 100vh;  /* fill the viewport height */
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering */
+  padding: 2rem;
+  box-sizing: border-box;
+  
+  /* Optional subtle brick background (from earlier) */
+  --c1: rgba(250, 250, 250, 0.3);
+  --c2: rgba(215, 224, 223, 0.2);
+  --c: var(--c2) 20% 30%;
+  --s: clamp(20px, 5vw, 80px);
+  background:
+    linear-gradient(135deg, #0000 20%, var(--c), #0000 0),
+    repeating-linear-gradient(45deg, var(--c), var(--c1) 0 70%);
+  background-size: var(--s) var(--s);
+  position: relative;
+  transform: scale(1.0);
+}
+
+
+
+/* Hero images wrapper */
+.hero-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Portrait image with radial border */
+.portrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait, .office {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait img.border {
+  width: clamp(200px, 20vw, 500px);
+  height: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .portrait img {
-	position: absolute;
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 0 4px  rgba(119, 79, 56, 0.9),
+    0 0 0 12px rgba(119, 79, 56, 0.35),
+    0 0 0 20px rgba(119, 79, 56, 0.15);
+
+  animation: borderBreath 6s ease-in-out infinite;
 }
 
-.office img {
-	position: absolute;
-	opacity: 0.4;
-	border-radius: 10px;
+
+/* Radial gradient border using pseudo-element */
+
+/* Office image with fade effect */
+.office {
+  position: relative;
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.main {
-	transform: scale(1.0);
-	width: 100%;
-	--c1: #fafafa;
-	--c2: #d7e0df;
-	--c: var(--c2) 20% 30%;
-	background:
-		linear-gradient(135deg, #0000 20%, var(--c), #0000 0),
-		repeating-linear-gradient(45deg, var(--c), var(--c1) 0 70%);
-	background-size: var(--s) var(--s);
-	position: relative;
+.office img.fade {
+  width: clamp(300px, 50vw, 700px);
+  height: auto;
+  border-radius: 10px;
+  opacity: 0.4;
+  display: block;
 }
 
-.border {
-	--s: 75px;
-	/* image size */
-	--b: 50px;
-	/* control the border thickness */
-	--n: 2;
-	/* number of borders */
-	--c: #774F38;
-
-
-	aspect-ratio: 1.2;
-	/* It works with any ratio */
-	--_p: calc(var(--b)*var(--n));
-	--_d: calc(var(--s)/(2*var(--n)) + var(--b));
-	padding: var(--_p);
-	border-radius: calc(var(--_p) + var(--b)/4);
-	border-image:
-		repeating-radial-gradient(var(--c) 0, #0000 2px calc(var(--_d)/2 - 2px),
-			var(--c) calc(var(--_d)/2) var(--_d)) 49.8%/var(--_p);
-
-	clip-path: inset(0 round var(--_p))
+/* Websites overlay on office */
+.office .websites {
+  position: absolute;
+  bottom: 2.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: flex;             /* horizontal layout */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  
+  z-index: 2;
 }
 
+.office .websites a {
+  display: inline-flex;      /* keeps links inline and works with flex */
+  border: none;
+  outline: none;
+  text-decoration: none;     /* remove underline */
+}
+
+.office .websites img {
+  width: clamp(40px, 5vw, 60px); /* responsive sizing */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: none;            /* remove blue outline */
+  vertical-align: middle;  /* ensure alignment inside links */
+}
+
+.office .websites img:hover {
+  transform: scale(1.2); /* subtle hover effect */
+}
+
+/* Font overlay on top of office */
 .font {
-	/*  padding: 1em 1em;*/
-	font-family: 'Gochi Hand', cursive;
-	color: #000000;
-	text-wrap: nowrap;
-	font-weight: bold;
-	position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Gochi Hand', cursive;
+  font-weight: bold;
+  font-size: 2vw; /* scales with viewport width */
+  max-font-size: 2.5rem;
+  min-font-size: 1rem;
+  color: #000;
+  text-align: center;
+  z-index: 3;
 }
 
-.font o {
-	display: block;
+.font span {
+  display: block;
 }
 
-.websites e {
-	position: absolute;
+/* Responsive layout: stacked if portrait height > width */
+@media (orientation: portrait) {
+  .hero-images {
+    flex-direction: column;
+  }
+}
+
+@media (orientation: landscape) {
+  .hero-images {
+    flex-direction: row;
+  }
+}
+
+@keyframes borderBreath {
+  0%, 100% {
+    box-shadow:
+      0 0 0 4px  rgba(119, 79, 56, 0.9),
+      0 0 0 12px rgba(119, 79, 56, 0.35),
+      0 0 0 20px rgba(119, 79, 56, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 0 6px  rgba(119, 79, 56, 0.85),
+      0 0 0 16px rgba(119, 79, 56, 0.28),
+      0 0 0 26px rgba(119, 79, 56, 0.10);
+  }
 }

@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="A professional website template">
-      <title>My Professional Website</title>
-      <link rel="stylesheet" href="css/style.css">
-   </head>
-   <body>
-      <section class="top">
-         <time>&nbsp;</time>
-         <time id="clock"></time>
-      </section>
-      <div class="main">
-         <div class="portrait">
-            <img src="images/alexgreece.jpg" alt="Santorini Greece" width="502" height="670" class="border">
-         </div>
-         <div class="office">
-            <img src="images/office.jpg" alt="Office Background" width="1011" height="670">
-            <section class="websites">
-               <e id="websiteData"></e>
-            </section>
-         </div>
-         <div class="font">
-            <o>Alex Gillam</o>
-            <o>Data Engineer</o>
-            <o>Olathe, KS</o>
-            <o>gillam96@gmail.com</o>
-         </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A professional website template">
+  <title>My Professional Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <section class="top">
+    <time>&nbsp;</time>
+    <time id="clock"></time>
+  </section>
+
+  <div class="main">
+
+    <div class="hero-images">
+
+      <!-- Portrait Image with Radial Border -->
+      <div class="portrait">
+        <img src="images/alexgreece.jpg" alt="Santorini Greece" class="border">
       </div>
-      <script src="js/timescript.js"></script>
-      <script src="js/getwebsite.js"></script>
-   </body>
+
+      <!-- Office Image with Fade and Websites overlay -->
+      <div class="office">
+        <img src="images/office.jpg" alt="Office Background" class="fade">
+        <div class="websites">
+          <span id="websiteData"></span>
+        </div>
+
+        <!-- Font Overlay -->
+        <div class="font">
+          <span>Alex Gillam</span>
+          <span>Data Engineer</span>
+          <span>Olathe, KS</span>
+          <span>gillam96@gmail.com</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/timescript.js"></script>
+  <script src="js/getwebsite.js"></script>
+</body>
 </html>
