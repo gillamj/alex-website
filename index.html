@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A professional website template">
-  <title>My Professional Website</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A professional website template">
+<title>My Professional Website</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <section class="top">
-    <time>&nbsp;</time>
-    <time id="clock"></time>
-  </section>
+<section class="top">
+  <time>&nbsp;</time>
+  <time id="clock"></time>
+</section>
 
-  <div class="main">
+<div class="main">
 
-    <div class="hero-images">
+  <div class="hero-images">
 
-      <!-- Portrait Image with Radial Border -->
-      <div class="portrait">
-        <img src="images/alexgreece.jpg" alt="Santorini Greece" class="border">
-      </div>
+    <!-- Portrait -->
+    <div class="portrait">
+      <img src="images/alexgreece.jpg" alt="Santorini Greece" class="border">
+    </div>
 
-      <!-- Office Image with Fade and Websites overlay -->
-      <div class="office">
-        <div class="office-container">
-          <img src="images/office.jpg" alt="Office Background" class="fade">
-          <div class="websites">
-            <span id="websiteData"></span>
-          </div>
+    <!-- Office -->
+    <div class="office">
 
-          <!-- Font Overlay -->
+      <div class="office-container">
+
+        <img src="images/office.jpg" alt="Office Background" class="fade">
+
+        <div class="overlay">
+
           <div class="font">
             <span>Alex Gillam</span>
             <span>Data Engineer</span>
             <span>Olathe, KS</span>
             <span>gillam96@gmail.com</span>
           </div>
+
+          <div class="websites">
+            <span id="websiteData"></span>
+          </div>
+
         </div>
+
       </div>
 
     </div>
 
   </div>
 
-  <script src="js/timescript.js"></script>
-  <script src="js/getwebsite.js"></script>
+</div>
+
+<script src="js/timescript.js"></script>
+<script src="js/getwebsite.js"></script>
+
 </body>
 </html>
