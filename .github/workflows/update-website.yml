@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      APP_DIR: "app"
       WATCHED_FOLDERS: "css images js"
       WATCHED_ROOT_FILES: "websiteconfig.json index.html"
       BUCKET: "alexpersonalwebsite.com"
@@ -28,23 +29,32 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       # --------------------------------------------------
-      # 1. Detect Git changes (adds, modifies, deletes)
+      # 1. Detect Git changes (inside app/)
       # --------------------------------------------------
       - name: Detect file changes
         run: |
           > changes.txt
 
           git diff --name-status ${{ github.event.before }} ${{ github.sha }} | while read status file; do
+            
+            # Only process files inside app/
+            if [[ "$file" != "$APP_DIR/"* ]]; then
+              continue
+            fi
+
+            # Strip "app/" prefix
+            relative_file="${file#$APP_DIR/}"
+
             # Root files
             for root_file in $WATCHED_ROOT_FILES; do
-              if [[ "$file" == "$root_file" ]]; then
+              if [[ "$relative_file" == "$root_file" ]]; then
                 echo "$status $file" >> changes.txt
               fi
             done
 
             # Folder files
             for folder in $WATCHED_FOLDERS; do
-              if [[ "$file" == "$folder/"* ]]; then
+              if [[ "$relative_file" == "$folder/"* ]]; then
                 echo "$status $file" >> changes.txt
               fi
             done
@@ -59,42 +69,49 @@ jobs:
       - name: Apply Git changes to S3
         run: |
           while read status file; do
+            # Strip "app/" prefix for S3 key
+            s3_path="${file#$APP_DIR/}"
+
             case "$status" in
               A|M)
                 if [ -f "$file" ]; then
-                  echo "Uploading changed file: $file"
-                  aws s3 cp "$file" "s3://$BUCKET/$file"
+                  echo "Uploading changed file: $s3_path"
+                  aws s3 cp "$file" "s3://$BUCKET/$s3_path"
                 fi
                 ;;
               D)
-                echo "Deleting from S3: $file"
-                aws s3 rm "s3://$BUCKET/$file"
+                echo "Deleting from S3: $s3_path"
+                aws s3 rm "s3://$BUCKET/$s3_path"
                 ;;
             esac
           done < changes.txt
 
       # --------------------------------------------------
-      # 3. Upload files that exist in Git but are missing in S3
+      # 3. Backfill missing files
       # --------------------------------------------------
       - name: Backfill missing files in S3
         run: |
           upload_if_missing () {
             local file="$1"
-            if ! aws s3 ls "s3://$BUCKET/$file" > /dev/null 2>&1; then
-              echo "Missing in S3, uploading: $file"
-              aws s3 cp "$file" "s3://$BUCKET/$file"
+            local s3_path="${file#$APP_DIR/}"
+
+            if ! aws s3 ls "s3://$BUCKET/$s3_path" > /dev/null 2>&1; then
+              echo "Missing in S3, uploading: $s3_path"
+              aws s3 cp "$file" "s3://$BUCKET/$s3_path"
             fi
           }
 
           # Root files
           for file in $WATCHED_ROOT_FILES; do
-            [ -f "$file" ] && upload_if_missing "$file"
+            full_path="$APP_DIR/$file"
+            [ -f "$full_path" ] && upload_if_missing "$full_path"
           done
 
           # Folder files
           for folder in $WATCHED_FOLDERS; do
-            if [ -d "$folder" ]; then
-              find "$folder" -type f | while read file; do
+            full_path="$APP_DIR/$folder"
+            if [ -d "$full_path" ]; then
+              find "$full_path" -type f | while read file; do
                 upload_if_missing "$file"
               done
             fi
